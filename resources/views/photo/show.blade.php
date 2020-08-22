@@ -4,21 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title data-title="maxvoltar.photo">{{$photo->title}}</title>
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:4000feed.xml">
-  <meta property="og:title" content="{{$photo->title}}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/img-{{$photo->id}}/">
-  <meta property="og:image" content="http://localhost:4000/photos/large/IMG_5133-686656.jpg">
-  <meta property="og:site_name" content="maxvoltar.photo">
-  <meta property="og:description" content="@maxvoltar's minimalistic, self-hosted photo stream.">
-  <meta name="thumbnail" content="http://localhost:4000/photos/large/IMG_5133-686656.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="maxvoltar">
-  <meta name="twitter:title" content="IMG_5133">
-  <meta name="twitter:description" content="@maxvoltar's minimalistic, self-hosted photo stream.">
-  <meta name="twitter:image:src" content="http://localhost:4000/photos/large/IMG_5133-686656.jpg">
-  <meta name="description" content="@maxvoltar's minimalistic, self-hosted photo stream.">
+  <title data-title="IArts">{{$photo->title}} - IArts</title>
+  <meta name="description" content="">
   <script type="text/javascript" src="/js/lazy-loading.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="/css/master.css" />
   <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />

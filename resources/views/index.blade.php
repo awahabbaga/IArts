@@ -4,21 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title data-title="maxvoltar.photo">maxvoltar.photo</title>
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:4000feed.xml">
-  <meta property="og:title" content="maxvoltar.photo">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/">
-  <meta property="og:image" content="http://localhost:4000social-preview.png">
-  <meta property="og:site_name" content="maxvoltar.photo">
-  <meta property="og:description" content="@maxvoltar's minimalistic, self-hosted photo stream.">
-  <meta name="thumbnail" content="http://localhost:4000social-preview.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="maxvoltar">
-  <meta name="twitter:title" content="maxvoltar.photo">
-  <meta name="twitter:description" content="@maxvoltar's minimalistic, self-hosted photo stream.">
-  <meta name="twitter:image:src" content="http://localhost:4000social-preview.png">
-  <meta name="description" content="@maxvoltar's minimalistic, self-hosted photo stream.">
+  <title data-title="IArts">IArts</title><meta name="description" content="">
   <script type="text/javascript" src="/js/lazy-loading.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="/css/master.css" />
   <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
