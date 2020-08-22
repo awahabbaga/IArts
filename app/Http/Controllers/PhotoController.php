@@ -96,11 +96,17 @@ class PhotoController extends Controller
         $data = validator($request->all(), [
             'title' => 'required',
             'description' => 'nullable|string',
-            'image' => 'required|image'
+            // 'image' => 'required|image'
         ])->validate();
-        $fn = $request->file('image')->getClientOriginalName();
+        // $fn = $request->file('image')->getClientOriginalName();
         $data['id'] = $photo->id;
-        $this->saveImages($request, $photo, $data);
+        $photo->fill([
+            'title' => $data['title'],
+            'description' => $data['description'] ?? ""
+        ]);
+
+        $photo->save();
+        // $this->saveImages($request, $photo, $data);
 
         return redirect(route('photo.index'));
 

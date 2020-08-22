@@ -29,22 +29,22 @@
                             <label for="description">Description</label>
                             <textarea class="form-control" id="description" rows="3" name="descripton">{{$photo['description']}}</textarea>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="image">Image</label>
                             <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
-                        </div>
+                        </div> -->
                         <button type="submit" class="btn btn-primary">Mise a jour</button>
                         <button class="btn btn-danger" onclick="event.preventDefault();
                                                      document.getElementById('delete-form').submit();">Delete</button>
 
 
 
-                        
+
                     </form>
                     <form id="delete-form" action="{{ route('photo.destroy', $photo) }}" method="POST" style="display: none;">
-                            @method('delete')
-                            @csrf
-                        </form>
+                        @method('delete')
+                        @csrf
+                    </form>
 
                 </div>
             </div>
