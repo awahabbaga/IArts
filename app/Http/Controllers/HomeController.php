@@ -23,6 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $configs = \App\Config::get()->groupBy('group')->toArray();
+        // dd($configs);
+        return view('home', compact('configs'));
+    }
+
+
+    public function about()
+    {
+        
     }
 }

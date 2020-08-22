@@ -29,71 +29,9 @@
 
 <body>
   <ul class="grid" id="target">
-    @foreach($photos as $photo)
-    <li class="item " id="img-{{$photo->id}}" style="background-image: url('{{$photo->tint}}')" title="{{$photo->title}}">
-      <img class="lazyload" data-src="{{$photo->thumbnail}}" src="{{$photo->tint}}" height="2854" width="2201" />
-      <span class="full">
-        <span style="background-image: url('{{$photo->large}}')"></span>
-      </span>
-      <a class="open" href="/img-{{$photo->id}}" data-target="img-{{$photo->id}}">Open</a>
-      <a class="close" href="/">Close</a>
-      <a href="/img-{{$photo->id}}" data-target="img-{{$photo->id}}" class="next" title="Go to next photo">
-        <span>Next</span>
-      </a>
-      @if(!$loop->first)
-      $p = $photos[$loop->index - 1];
-      <a href="/img-5158" data-target="img-5158" class="previous" title="Go to previous photo">
-        <span>Previous</span>
-      </a>
-      @endif
-      @if(!$loop->last)
-      $n = $photos[$loop->index + 1];
-      <a href="/img-5156" data-target="img-5156" class="next" title="Go to next photo">
-        <span>Next</span>
-      </a>
-      @endif
-        <!-- <ul class="meta">
-    <li>iPhone 11 Pro Max</li>
-    <li>1/122</li>
-    <li><span class="aperture"><em>f</em>/</span>1.8</li>
-	</ul> -->
-    </li>
-    @endforeach
-
-    <li class="item " id="foto" style="background-image: url('/photos/tint/foto-65ba1d.jpg')" title="foto">
-      <img class="lazyload" data-src="/photos/thumbnail/foto-ccf4df.jpg" src="/photos/tint/foto-65ba1d.jpg" height="4032" width="3024" />
-      <span class="full">
-        <span style="background-image: url('/photos/large/foto-686656.jpg')"></span>
-      </span>
-      <a class="open" href="/foto" data-target="foto">Open</a>
-      <a class="close" href="/">Close</a>
-      <a href="/img-5133" data-target="img-5133" class="previous" title="Go to previous photo">
-        <span>Previous</span>
-      </a>
-      <!-- <ul class="meta">
-    <li></li>
-    <li></li>
-    <li><span class="aperture"><em>f</em>/</span>0.0</li>
-	</ul> -->
-    </li>
+    @include('photo-list')
   </ul>
-  <ul class="links">
-    <!-- You can add links (to your social media profiles for example) below -->
-    <li class="rss"><a rel="alternate" type="application/rss+xml" href="http://localhost:4000feed.xml" title="RSS Feed">RSS Feed</a></li>
-    <li class="github"><a rel="me" href="https://github.com/maxvoltar/photo-stream" title="Fork on Github">Github</a></li>
-    <li class="link"><a rel="me" href="https://twitter.com/maxvoltar" title="@maxvoltar on Twitter">Twitter</a></li>
-    <!-- <li class="link"><a rel="me" href="https://github.com/maxvoltar" title="@maxvoltar on Github">Github</a></li> -->
-    <!-- <li class="link"><a rel="me" href="https://instagram.com/maxvoltar" title="@maxvoltar on Instagram">Instagram</a></li> -->
-    @if (Route::has('login'))
-
-    @auth
-    <li class="link"><a class="link" href="{{ url('/home') }}">Home</a></li>
-    @else
-    <li class="link"><a class="link" href="{{ route('login') }}">Login</a></li>
-    @endauth
-
-    @endif
-  </ul>
+  @include('links')
   <script>
     const ESCAPE = 27;
     const RIGHT = 39;

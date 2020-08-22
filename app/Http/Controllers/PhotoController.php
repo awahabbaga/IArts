@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
 
@@ -45,37 +47,17 @@ class PhotoController extends Controller
             'description' => 'nullable|string',
             'image' => 'required|image'
         ])->validate();
-        $fn = $request->file('image')->getClientOriginalName();
-        //get filename without extension
-        $filename = pathinfo($fn, PATHINFO_FILENAME);
-
-        //get file extension
-        $extension = $request->file('image')->getClientOriginalExtension();
-
-        $filenametostore = $data['title'] . '_' . time() . '.' . $extension;
-        $request->file('image')->storeAs('public/photos/original', $filenametostore);
-        $request->file('image')->storeAs('public/photos/tint', $filenametostore);
-        $request->file('image')->storeAs('public/photos/large', $filenametostore);
-        $request->file('image')->storeAs('public/photos/thumbnail', $filenametostore);
-
-        $thumbnail = public_path('storage/photos/thumbnail/' . $filenametostore);
-        $this->createThumbnail($thumbnail, null, 300);
-        $tint = public_path('storage/photos/tint/' . $filenametostore);
-        $this->createThumbnail($tint, 1, 1);
-        $large = public_path('storage/photos/large/' . $filenametostore);
-        // $this->createThumbnail($large, 1, 1);
-        $path = public_path('storage/photos/original/' . $filenametostore);
 
 
-        $p = Photo::create([
-            'title' => $data['title'],
-            'description' => $data['description'] ?? "",
-            'path' => $path,
-            'large' => "",
-            'tint' => "",
-            'thumbnail' => "",
-            'filename' => $filenametostore,
-        ]);
+        
+
+        $photo = new Photo();
+
+  
+        $data['id'] = $photo->getNextSequenceValue();
+        $this->saveImages($request, $photo, $data);
+        
+        // dd($photo);
 
         return redirect(route('photo.index'));
     }
@@ -99,7 +81,7 @@ class PhotoController extends Controller
      */
     public function edit(Photo $photo)
     {
-        //
+        return view('photo.edit', compact('photo'));
     }
 
     /**
@@ -111,7 +93,50 @@ class PhotoController extends Controller
      */
     public function update(Request $request, Photo $photo)
     {
-        //
+        $data = validator($request->all(), [
+            'title' => 'required',
+            'description' => 'nullable|string',
+            'image' => 'required|image'
+        ])->validate();
+        $fn = $request->file('image')->getClientOriginalName();
+        $data['id'] = $photo->id;
+        $this->saveImages($request, $photo, $data);
+
+        return redirect(route('photo.index'));
+
+    }
+
+    public function saveImages(Request $request, Photo $photo, $data)
+    {
+        //get file extension
+        $extension = $request->file('image')->getClientOriginalExtension();
+
+        $filenametostore = $data['id'] . '_' . Str::slug(config('app.name'), '_') . '.' . $extension;
+        $request->file('image')->storeAs('public/photos/original', $filenametostore);
+        $request->file('image')->storeAs('public/photos/tint', $filenametostore);
+        $request->file('image')->storeAs('public/photos/large', $filenametostore);
+        $request->file('image')->storeAs('public/photos/thumbnail', $filenametostore);
+
+        $thumbnail = public_path('storage/photos/thumbnail/' . $filenametostore);
+        $this->createThumbnail($thumbnail, null, 300);
+        $tint = public_path('storage/photos/tint/' . $filenametostore);
+        $this->createThumbnail($tint, 1, 1);
+        $large = public_path('storage/photos/large/' . $filenametostore);
+        // $this->createThumbnail($large, 1, 1);
+        $path = public_path('storage/photos/original/' . $filenametostore);
+
+
+        $photo->fill([
+            'title' => $data['title'],
+            'description' => $data['description'] ?? "",
+            'path' => $path,
+            'large' => "",
+            'tint' => "",
+            'thumbnail' => "",
+            'filename' => $filenametostore,
+        ]);
+
+        $photo->save();
     }
 
     /**
@@ -122,7 +147,14 @@ class PhotoController extends Controller
      */
     public function destroy(Photo $photo)
     {
-        //
+        $filename = $photo->filename;
+        $thumbnail = public_path('storage/photos/thumbnail/' . $filename);
+        $tint = public_path('storage/photos/tint/' . $filename);
+        $path = public_path('storage/photos/original/' . $filename);
+        $large = public_path('storage/photos/large/' . $filename);
+        Storage::delete($tint, $thumbnail, $path, $large);
+        $photo->delete();
+        return redirect(route('photo.index'));
     }
 
     /**
