@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    $photos = Photo::latest()->get();
+    // $photos = Photo::latest()->get();
+    $photos = [];
+    return view('new', compact('photos'));
+});
+
+Route::get('/v2', function () {
+    // $photos = Photo::latest()->get();
+    $photos = [];
     return view('index', compact('photos'));
 });
 
