@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>IArts</title>
+  <title>Iqfeaan Arts</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -36,10 +36,9 @@
   <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
     <div class="container d-flex justify-content-end">
       <div class="social-links">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.facebook.com/iqbal.toorabally.9" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.facebook.com/Artiste-Phoenix-103845607906203" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/artistehit/" class="instagram"><i class="fa fa-instagram"></i></a>
       </div>
     </div>
   </div>
@@ -48,7 +47,7 @@
   <header id="header" class="fixed-top header-transparent">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="/">IArt</a></h1>
+      <h1 class="logo mr-auto"><a href="/">Iqfeaan Art</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -81,14 +80,15 @@
 
           <div class="col-lg-7 col-md-6">
             <div class="about-content" data-aos="fade-left" data-aos-delay="100">
-              <h2>À propos de IArts</h2>
-              <h3>Une peu de texte</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p>
+              <h2>À propos de IqfeaanArt</h2>
+              <h3>Bref resumé</h3>
+              <p>Soucieux de mettre le client en avant nous sommes près à vous répondre à tout temps.Nos différentes activités sont essentiellement basées sur les suivantes: </p>
               <ul>
-                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i class="ion-android-checkmark-circle"></i> Tableaux de peinture selon votre choix</li>
+                <li><i class="ion-android-checkmark-circle"></i> Publicité de peinture</li>
+                <li><i class="ion-android-checkmark-circle"></i> Calligraphie en tout genre</li>
+                <li><i class="ion-android-checkmark-circle"></i> Reproduction de logo</li>
+                <li><i class="ion-android-checkmark-circle"></i> Décoration anniversaire</li>
               </ul>
             </div>
           </div>
@@ -104,7 +104,7 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
+          <h3 class="section-title">Galerie Photo</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -178,16 +178,15 @@
                     001 Rue AAA <br>
                     Montreal, QC A1A A1A<br>
                     Canada <br>
-                    <strong>Phone:</strong> +1 514 999 9999<br>
-                    <strong>Email:</strong> info@example.com<br>
+                    <strong>Phone:</strong> +1 514 663 1079<br>
+                    <strong>Email:</strong> ben200062@hotmail.com<br>
                   </p>
                 </div>
 
                 <div class="social-links mb-2">
-                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  <a href="https://www.facebook.com/iqbal.toorabally.9" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.facebook.com/Artiste-Phoenix-103845607906203" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/artistehit/" class="instagram"><i class="fa fa-instagram"></i></a>
                 </div>
 
               </div>
