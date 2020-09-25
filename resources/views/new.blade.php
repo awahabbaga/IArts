@@ -192,8 +192,8 @@
 
               </div>
                 <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178791.72096623524!2d-73.87038462596968!3d45.55795644465746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2zTW9udHLDqWFsLCBRQywgQ2FuYWRh!5e0!3m2!1sfr!2sbg!4v1600381035165!5m2!1sfr!2sbg" style="border:0; width: 100%; height: 290px;"  frameborder="0"  allowfullscreen ></iframe>
-
+                 <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178791.72096623524!2d-73.87038462596968!3d45.55795644465746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2zTW9udHLDqWFsLCBRQywgQ2FuYWRh!5e0!3m2!1sfr!2sbg!4v1600381035165!5m2!1sfr!2sbg" style="border:0; width: 100%; height: 290px;"  frameborder="0"  allowfullscreen ></iframe> --> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.345128874973!2d-73.76077424924209!3d45.5252583097167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc92318bc87d799%3A0xa0924f10655aa9b3!2s188%20Promenade%20des%20%C3%8Eles%2C%20Laval%2C%20QC%20H7W%203T1!5e1!3m2!1sfr!2sca!4v1601011723815!5m2!1sfr!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
             </div>
 
